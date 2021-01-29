@@ -5,7 +5,7 @@ import nodeEndpoint from "comlink/dist/umd/node-adapter.min.js";
 export function parseMalformedJSON (
     malformedJSON
 ) {
-    const worker = new Worker(`./utilities/ScraperFactory/utilities/parseMalformedJSON/worker.js`);
+    const worker = new Worker(`./worker.js`);
     const parse = Comlink.wrap(nodeEndpoint(worker));
     // @ts-ignore
     return parse(malformedJSON);
