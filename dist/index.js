@@ -25,10 +25,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.parseMalformedJSON = void 0;
 const worker_threads_1 = require("worker_threads");
 const Comlink = __importStar(require("comlink"));
-const node_adapter_1 = __importDefault(require("comlink/src/node-adapter"));
+const node_adapter_min_js_1 = __importDefault(require("comlink/dist/umd/node-adapter.min.js"));
 function parseMalformedJSON(malformedJSON) {
     const worker = new worker_threads_1.Worker(`./utilities/ScraperFactory/utilities/parseMalformedJSON/worker.js`);
-    const parse = Comlink.wrap(node_adapter_1.default(worker));
+    const parse = Comlink.wrap(node_adapter_min_js_1.default(worker));
     // @ts-ignore
     return parse(malformedJSON);
 }

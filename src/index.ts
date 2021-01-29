@@ -1,6 +1,6 @@
 import { Worker } from "worker_threads";
 import * as Comlink from "comlink";
-import nodeEndpoint from "comlink/src/node-adapter";
+import nodeEndpoint from "comlink/dist/umd/node-adapter.min.js";
 
 export function parseMalformedJSON (
     malformedJSON

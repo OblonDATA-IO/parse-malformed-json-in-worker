@@ -24,9 +24,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const worker_threads_1 = require("worker_threads");
 const Comlink = __importStar(require("comlink"));
-const node_adapter_1 = __importDefault(require("comlink/src/node-adapter"));
+const node_adapter_min_js_1 = __importDefault(require("comlink/dist/umd/node-adapter.min.js"));
 const dirty_json_1 = __importDefault(require("dirty-json"));
 function parse(malformedJSON) {
     return dirty_json_1.default.parse(malformedJSON);
 }
-Comlink.expose(parse, node_adapter_1.default(worker_threads_1.parentPort));
+Comlink.expose(parse, node_adapter_min_js_1.default(worker_threads_1.parentPort));
