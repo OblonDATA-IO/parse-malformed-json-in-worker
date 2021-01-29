@@ -1,5 +1,5 @@
 {
-  "name": "parse-mallformed-json",
+  "name": "parse-malformed-json-in-worker",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -12,6 +12,10 @@
   },
   "author": "OblonDATA.IO Limited <contact@oblondata.io>",
   "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/OblonDATA-IO/parse-malformed-json-in-worker.git"
+  },
   "dependencies": {
     "comlink": "^4.3.0",
     "dirty-json": "^0.9.2"
