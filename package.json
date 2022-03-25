@@ -1,6 +1,6 @@
 {
   "name": "parse-malformed-json-in-worker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "private": true,
   "main": "dist/index.js",
@@ -13,16 +13,16 @@
   "author": "OblonDATA.IO Limited <contact@oblondata.io>",
   "license": "ISC",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/OblonDATA-IO/parse-malformed-json-in-worker.git"
+    "type": "git",
+    "url": "https://github.com/OblonDATA-IO/parse-malformed-json-in-worker.git"
   },
   "dependencies": {
-    "comlink": "^4.3.0",
+    "comlink": "^4.3.1",
     "dirty-json": "^0.9.2"
   },
   "devDependencies": {
-    "@types/node": "^14.14.22",
-    "nodemon": "^2.0.7",
-    "typescript": "^4.1.3"
+    "@types/node": "^17.0.23",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.6.3"
   }
 }

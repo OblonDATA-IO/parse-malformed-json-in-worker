@@ -1,7 +1,11 @@
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -28,7 +32,7 @@ const Comlink = __importStar(require("comlink"));
 const node_adapter_min_js_1 = __importDefault(require("comlink/dist/umd/node-adapter.min.js"));
 function parseMalformedJSON(malformedJSON) {
     const worker = new worker_threads_1.Worker(`${__dirname}/worker.js`);
-    const parse = Comlink.wrap(node_adapter_min_js_1.default(worker));
+    const parse = Comlink.wrap((0, node_adapter_min_js_1.default)(worker));
     // @ts-ignore
     return parse(malformedJSON);
 }
